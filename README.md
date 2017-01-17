@@ -1,2 +1,0 @@
-# Ewa
-Ewa's scripts
