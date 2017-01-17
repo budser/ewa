@@ -208,22 +208,5 @@ Send f
 
 Return
 
-::-listen::
-
-SetTitleMatchMode, 2
-IfWinExist, Start speech
-{
-	IfWinNotActive, Start speech
-	{
-		WinActivate, Start speech
-	} 
-}
-Else
-{
-	Run C:\Users\HP\Documents\Program Files\Installation Files\Start speech recognition.lnk   
-}
-
-Return 
-
 Return ; End of file
 
