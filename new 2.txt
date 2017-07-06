@@ -1,0 +1,23 @@
+
+::-wsj::	; Search highlighted title of WSJ article in FB so that you can bypass paywall
+
+SleepTime := 250 ; Set the time to sleep between steps to .25 seconds
+OldClip := ClipBoard
+ClipBoard := "" ; ClipBoard is now empty
+
+SendInput ^c
+Sleep, %SleepTime%
+
+if(ClipBoard <> "") ; Something was highlighted and copied
+{
+	Run https://www.facebook.com/search/top/?q=%ClipBoard%
+}
+else 
+{
+	MsgBox, Please highlight article title and type -wsj to bypass the paywall!
+
+}
+
+ClipBoard := OldClip ; Restore contents of ClipBoard
+
+Return 
